@@ -121,6 +121,7 @@ SELECT *, (RollingPeopleVaccinated/population)*100
 From PercentPopulationVaccinated;
 
 -- Create view
+Create view Percent_PeopleVaccinated as 
 select cd.continent, cd.location, cd.date, cd.population, (cv.new_vaccinations), 
 sum((cv.new_vaccinations)) over (partition by cd.`location` order by cd.`location`, cd.`date`) as RollingPeopleVaccinated
 from `Covid deaths` cd
