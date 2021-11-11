@@ -94,9 +94,7 @@ From PopulationVsVaccination
 
 
 -- temp table
-Drop Table if exists PercentPopulationVaccinated ;
-
-
+Drop Table if exists PercentPopulationVaccinated 
 Create TABLE PercentPopulationVaccinated
 (
 Continent VARCHAR(255),
